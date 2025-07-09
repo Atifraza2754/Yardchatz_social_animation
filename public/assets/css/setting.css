@@ -1,0 +1,43 @@
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to right, #264d26c2, #7b2f2fe8, #4e1f1fd4);
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-end !important;         /* force icon grow UP */
+    overflow: visible !important;  /* allow icon to grow outside */
+    white-space: nowrap !important;
+    gap: 35px !important;
+    z-index: 1000;
+}
+
+.navbar .icon {
+    width: 48px !important;
+    height: 48px !important;
+    object-fit: contain !important;
+    transition: transform 0.3s ease !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.navbar .icon:hover,
+.navbar .icon.active {
+    transform: scale(3); /* 48px x 3 = 144px */
+    transform-origin: bottom center; /* grow upward */
+    z-index: 10;
+}
+
+    /* Modal Styles */
+@media (max-width: 576px) {
+    .img-thumbnail {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+

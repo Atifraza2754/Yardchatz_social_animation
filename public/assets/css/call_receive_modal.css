@@ -1,0 +1,255 @@
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.custom-modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 300px;
+  max-width: 90%;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+
+.btn-decline {
+  background-color: #dc3545;
+  color: white;
+}
+
+
+
+
+
+.call-banner {
+width: 100%;
+height: 400px;
+position: relative;
+overflow: hidden;
+}
+
+.call-title {
+position: absolute;
+left: 207px;
+top: 67%;
+transform: translateY(-50%);
+color: white;
+font-size: 28px;
+font-weight: 900;
+line-height: 1;
+text-transform: uppercase;
+width: 300px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+z-index: 2;
+}
+
+.caller-profile-container {
+margin-top: 10%;
+transform: translateY(-50%);
+z-index: 1;
+margin-left: 26%;
+}
+
+.call-profile-circle {
+width: 20%;
+height: 100%;
+overflow: hidden;
+background-image: url(assets/img/Maskdfdfroup.svg);
+background-repeat: no-repeat;
+}
+
+.profile-circle img {
+width: 8%;
+object-fit: cover;
+margin-top: 47px;
+margin-left: 24px;
+}
+
+.call-name {
+position: absolute;
+top: 41%;
+color: white;
+font-size: 17px;
+font-weight: bold;
+text-transform: uppercase;
+left: 64%;
+}
+
+/* Icons */
+.speaker-icon,
+.phone-icon,
+.video-icon,
+.decline-icon,
+.audio-decline-icon,
+.chat-icon {
+position: absolute;
+width: 70px;
+height: 70px;
+background: white;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.speaker-icon {
+background: transparent;
+}
+
+.speaker-icon {
+left: 13%;
+top: 30%;
+}
+
+.phone-icon {
+top: 18%;
+left: 39%;
+}
+
+.video-icon {
+bottom: 24%;
+left: 39%;
+}
+
+.chat-icon {
+bottom: 46%;
+left: 55%;
+}
+
+.decline-icon {
+bottom: 23%;
+left: 48%;
+}
+
+.audio-decline-icon{
+bottom: 64%;
+left: 48%;
+}
+
+/* Animation for icons */
+@keyframes float {
+0% {
+transform: translateY(0px);
+}
+
+50% {
+transform: translateY(-10px);
+}
+
+100% {
+transform: translateY(0px);
+}
+}
+
+.speaker-icon {
+animation-delay: 0s;
+}
+
+.phone-icon {
+animation-delay: 0.5s;
+}
+
+.video-icon {
+animation-delay: 1s;
+}
+
+.chat-icon {
+animation-delay: 1.5s;
+}
+.decline-icon {
+animation-delay: 1.5s;
+}
+
+.audio-decline-icon{
+animation-delay: 1.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+.title {
+font-size: 60px;
+width: 250px;
+}
+
+.call-profile-container {
+width: 250px;
+height: 250px;
+}
+}
+
+@media (max-width: 768px) {
+.call-title {
+font-size: 40px;
+width: 200px;
+left: 30px;
+}
+
+.call-profile-container {
+width: 200px;
+height: 200px;
+right: 30%;
+}
+
+.speaker-icon,
+.phone-icon,
+.video-icon,
+.chat-icon,
+.decline-icon,
+.audio-decline-icon{
+width: 50px;
+height: 50px;
+}
+
+.speaker-icon img,
+.phone-icon img,
+.video-icon img,
+.chat-icon img,
+.decline-icon,
+.audio-decline-icon {
+width: 25px;
+height: 25px;
+}
+
+.name {
+font-size: 20px;
+right: 30px;
+}
+}
+
+@keyframes inOutPop {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.15);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Class to apply on video-icon and decline-icon */
+.icon-animate {
+  animation: inOutPop 1.2s ease-in-out infinite;
+}
+
+#recordBtn{
+    left:-300px;
+}

@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Public directory ko default bana raha hai
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

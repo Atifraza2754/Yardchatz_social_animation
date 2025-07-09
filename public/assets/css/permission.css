@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Press Start 2P', cursive;
+    background: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+}
+
+.logo-text {
+    color: #7FFF00;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 50px;
+}
+
+.green-apple {
+    width: 200px;
+    height: 200px;
+    background-color: #7FFF00;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.permission-text {
+    width: 60%;
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.permissions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+    width: 80%;
+}
+
+.permission-item {
+  
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.astronaut {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 150px;
+    height: 150px;
+}
+.green-apple a{
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .green-apple {
+        margin-bottom: 30px;
+    }
+
+    .permission-text {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .permissions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .astronaut {
+        width: 100px;
+        height: 100px;
+    }
+}

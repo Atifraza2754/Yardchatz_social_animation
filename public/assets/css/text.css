@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+        
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Playfair Display', serif;
+    background-color: #000000;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.text {
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 20px;
+}
+
+.logo-wrapper {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 160px;
+    height: 160px;
+    z-index: 2;
+}
+
+
+
+.video-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .logo-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .text {
+        font-size: 30px;
+    }
+
+    .video-link {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,117 @@
+.audio_span {
+    position: absolute;
+    left: 50%;
+    color: #fff;
+    z-index: 999999999;
+    width: 5%;
+    margin-top: 5%;
+}
+span.audio_span.audio_span_three {
+position: absolute;
+margin-top: -78px;
+left: 55%;
+font-size: 32px;
+color: #fff;
+z-index: 999999999;
+}
+span.audio_span.audio_span_four {
+margin-top: 13px;
+left: 38%;
+font-size: 25px;
+color: #fff;
+z-index: 999999999;
+}
+img.img_apple.apple_three_img.img_five.six {
+margin-left: 61%;
+margin-top: -380px;
+position: absolute;
+}
+span.audio_span.audio_span_three.span_five.six {
+margin-top: -319px;
+left: 64%;
+}
+img.img_apple.apple_three_img.img_five.six.seven {
+margin-top: -225px;
+margin-left: 64%;
+}
+span.audio_span.audio_span_three.span_five.six.seven {
+margin-top: -165px;
+margin-left: 3%;
+}
+@media (max-width: 480px) {
+    img.img_apple {
+            width: 33%;
+            margin-left: 5%;
+        }
+     img.img_apple.apple_two_img {
+    margin-left: 5%;
+    margin-top: 0px;
+    width: 34%;
+    }
+     img.img_apple.apple_three_img {
+      margin-top: 0px;
+    margin-left: 7%;
+ }
+ img.img_apple.apple_four_img {
+    margin-left: 63% !important;
+    position: absolute !important;
+    top: 54px !important;
+}
+img.img_apple.apple_three_img.img_five {
+        position: absolute;
+        top: 23%;
+        left: 54%;
+    }
+ .audio_span {
+    margin-top: 65px;
+    left: 72%;
+    width: 18%;
+}    
+span.audio_span.audio_span_four {
+    margin-top: -99px !important;
+    left: 15% !important;
+}
+span.audio_span.audio_span_two {
+    left: 13%;
+    margin-top: -28%;
+    width: 19%;
+       
+    }
+span.audio_span.audio_span_three {
+    position: absolute;
+    margin-top: -103px;
+    left: 71%;
+    font-size: 32px;
+    color: #fff;
+    z-index: 999999999;
+}   
+img.img_apple.apple_three_img.img_five.six {
+margin-left: -21%;
+margin-top: -26%;
+position: absolute;
+}
+span.audio_span.audio_span_three.span_five.six.hello {
+    margin-top: -90%;
+    left: 40%;
+}
+    span.audio_span.audio_span_three.span_five {
+        margin-top: -255px;
+        left: 13%;
+    } 
+span.audio_span.audio_span_four {
+    margin-top: -77px;
+    left: 17%;
+    font-size: 25px;
+    color: #fff;
+    z-index: 999999999;
+}
+img.img_apple.apple_three_img.img_five.six.seven {
+        margin-top: 156px;
+        margin-left: 8%;
+    }
+span.audio_span.audio_span_three.span_five.six.seven {
+    margin-top: -87px;
+    margin-left: 6%;
+    width: 18%;
+}                    
+}

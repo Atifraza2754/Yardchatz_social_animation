@@ -1,0 +1,1284 @@
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Banner Section */
+        .banner {
+            position: relative;
+            width: 120%;
+            margin-left: -135px;
+            height: 65vh;
+            background-image: url('/placeholder.svg?height=300&width=1400');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .banner {
+                width: 100%;
+                margin-left: 0;
+                height: 65vh;
+                /* Adjust based on mobile design preference */
+                border-radius: 8px;
+                /* Optional: Slightly less rounded for mobile */
+            }
+        }
+
+
+
+        /* .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url();
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        } */
+        .img-banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* height: 100%; */
+            /* background-image: url(); */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            transform: translateY(-50%);
+            text-align: left;
+            max-width: 100%;
+            max-height: 400px;
+            /* Adjust the max height as needed */
+            overflow-x: auto;
+            /* Enables horizontal scrolling */
+            overflow-y: auto;
+            /* Enables vertical scrolling */
+        }
+
+        .banner-text h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .banner-text p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        /* Videos Grid */
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* Video Card */
+        .video-card {
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .video-card:hover {
+            transform: scale(1.02);
+        }
+
+        .thumbnail-container {
+            position: relative;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .thumbnail-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .duration {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .video-info {
+            padding: 10px 0;
+        }
+
+
+        .video-meta {
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .dot {
+            margin: 0 4px;
+        }
+
+        .menu-btn {
+            position: absolute;
+            top: 10px;
+            right: 0;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px;
+            display: none;
+        }
+
+        .video-card:hover .menu-btn {
+            display: block;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 30px;
+            right: 0;
+            background-color: #282828;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            width: 200px;
+            z-index: 10;
+            display: none;
+        }
+
+        .menu-item {
+            padding: 12px 16px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            background-color: #383838;
+        }
+
+        .info-card {
+            background-color: rgba(231, 76, 60, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            line-height: 1.5;
+            z-index: 10;
+            text-align: left;
+            width: 100%;
+            height: 100%;
+
+            overflow: hidden;
+        }
+
+        .info-card h2 {
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        /* Row styling to reduce spacing */
+        .row {
+            margin-bottom: 10px;
+        }
+
+        .col-md-6 {
+            margin-bottom: 5px;
+        }
+
+
+        @media (max-width: 768px) {
+
+            .info-card {
+                background-color: rgba(231, 76, 60, 0.9);
+                padding: 10px;
+                border-radius: 15px;
+                line-height: 1.2;
+                z-index: 10;
+                text-align: left;
+                width: 80%;
+            }
+
+
+
+            .info-card h2 {
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            /* Row styling to reduce spacing */
+            .row {
+                margin-bottom: 10px;
+            }
+
+            .col-md-3 {
+                margin-bottom: 5px;
+            }
+
+            #backtbn {
+                margin-left: 70px;
+                ;
+            }
+        }
+
+
+
+        .decorative-frame {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 65%;
+            height: 100%;
+            background-color: #e74c3c;
+            clip-path: polygon(100% 0, 100% 100%, 0 100%, 30% 50%, 0 0);
+            z-index: 1;
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .videos-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .videos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .banner-text {
+                left: 27px;
+                width: 40%;
+                top: 92%;
+            }
+        }
+
+
+
+
+        @media (max-width: 600px) {
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .banner {
+                height: 200px;
+            }
+
+            .banner-text {
+                left: 20px;
+            }
+
+            .banner-text h2 {
+                font-size: 22px;
+            }
+
+            .banner-text p {
+                font-size: 14px;
+            }
+        }
+
+
+        .banner-text {
+            display: inline-block;
+        }
+
+
+        .camera-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: none;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 18px;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .favorite-icon {
+            position: absolute;
+            color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 18px;
+            z-index: 100;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .favorite-icon {
+            bottom: 20px;
+            right: 6px;
+        }
+
+
+        .banner:hover .camera-icon {
+            display: block;
+        }
+
+        /* Hide file input */
+        #fileInput {
+            display: none;
+        }
+
+
+        .text-controls {
+            position: absolute;
+            right: 350px;
+            top: 430px;
+            flex-direction: column;
+            gap: 8px;
+            z-index: 999;
+            font-size: 14px;
+        }
+
+        /* Mobile screen: move to top-right */
+        @media (max-width: 768px) {
+            .text-controls {
+                position: fixed;
+                width: 14%;
+                right: 320px;
+                top: 30px;
+
+            }
+        }
+
+        .text-controls button {
+            padding: 6px;
+            background: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .text-controls select {
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-weight: 200;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .friend-request-wrapper {
+            position: absolute;
+            bottom: 40px;
+            right: 100px;
+        }
+
+        .friend-request-btn {
+            background-color: green;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .friend-request-dropdown {
+            display: none;
+            position: absolute;
+            bottom: 110%;
+            /* OPEN ABOVE the button */
+            background-color: white;
+            border: 1px solid dark;
+            color: red;
+            right: 0px;
+            border-radius: 8px;
+            width: 280px;
+            max-height: 300px;
+            overflow-y: auto;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            z-index: 1;
+        }
+
+        .request-item {
+            padding: 10px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .request-item img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .request-actions button {
+            margin-left: 4px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .confirm-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .reject-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        /* Define CSS Variables */
+        :root {
+            --text-color: white;
+            /* Default color */
+            --font-family: 'Arial';
+            /* Default font-family */
+            --font-size: 16px;
+            /* Default font-size */
+        }
+
+        .info-card {
+            font-family: var(--font-family);
+            font-size: var(--font-size);
+            color: var(--text-color);
+        }
+
+        /* You can also style specific elements */
+        .info-card h2,
+        .info-card p,
+        .info-card a,
+        .info-card button {
+            color: inherit;
+            /* This will inherit the color from the root variable */
+            font-family: inherit;
+            /* Inherit font family */
+            font-size: inherit;
+            /* Inherit font size */
+        }
+
+        .gallery {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 15px auto;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-10px);
+        }
+
+        .title {
+            font-family: 'Cinzel Decorative', cursive;
+            color: white;
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .section:hover .title {
+            opacity: 1;
+        }
+
+        @media (max-width: 1200px) {
+            .gallery {
+                padding: 1rem;
+            }
+
+            .image-wrapper {
+                width: 150px;
+                height: 150px;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .section {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .image-wrapper {
+                width: 100%;
+                height: 200px;
+            }
+        }
+
+        @media screen and (max-width: 896px) and (orientation: landscape) {
+            .gallery {
+                gap: 1rem;
+                bottom: 20px;
+            }
+
+            .section {
+                gap: 0rem;
+                transition: transform 0.3s ease;
+            }
+        }
+
+        #friendRequestDropdown {
+            right: -65px;
+            bottom: 90px;
+            width: 300px;
+
+        }
+
+        .request-actions {
+            display: contents;
+        }
+
+
+        /* Audio Profile Container and Profile Row */
+        .audio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* 4 audio cards per row */
+            gap: 20px;
+        }
+
+        .audio-card {
+            position: relative;
+            text-align: center;
+        }
+
+        .audio-thumbnail-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .audio-info {
+            margin-top: 10px;
+        }
+
+        .audio-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /*Audio Icons container */
+        .card-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        /* Individual icons */
+        .card-icons img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .card-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Audio Comment Panel Style */
+        .comment-panel {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 40%;
+            height: 100%;
+            background: #111;
+            color: white;
+            transition: right 0.3s ease-in-out;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .comment-panel.open {
+            right: 0;
+        }
+
+        .comment-panel header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+        }
+
+        .comment-panel header h3 {
+            margin: 0;
+        }
+
+        .comment-panel button {
+            background: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .comment-panel button:hover {
+            background: #ff1a1a;
+        }
+
+        .comment-panel .comment-section {
+            margin-top: 20px;
+        }
+
+        .comment-panel textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+            min-height: 100px;
+            font-size: 14px;
+        }
+
+        .comment-panel .send-button {
+            background: #0084ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        .comment-panel .send-button:hover {
+            background: #006bb3;
+        }
+
+        .comment-panel {
+            /* Maximum height for the comment panel */
+            max-height: 800px;
+            /* Adjust this value to your needs */
+            overflow-y: auto;
+            /* This will enable vertical scrolling */
+        }
+
+        .comment-card {
+            background-color: gray;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comment-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .comment-user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .comment-user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        .comment-username {
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+        }
+
+        .comment-body {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: white;
+        }
+
+        .comment-footer {
+            margin-left: 2px;
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        .comment-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .comment-actions .comment-action {
+            cursor: pointer;
+        }
+
+        .comment-actions .heart-icon {
+            width: 25px;
+            height: 25px;
+            margin-top: -5px;
+        }
+
+        .comment-actions span:hover {
+            color: white;
+        }
+
+        /* End Audio Comment Panel Style */
+
+        /* Audio Share Modal Styles */
+        .Audioshare-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 60px;
+        }
+
+        .Audioshare-modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        .Audioshare-modal-header {
+            text-align: right;
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .Audioshare-options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .Audioshare-options a img {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Full-width input field */
+        .Audioshare-modal .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .Audioshare-modal .copy-btn {
+            background: #0084ff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .Audioshare-modal .copy-btn:hover {
+            background: #006bb3;
+        }
+
+        .Audiolinks {
+            display: flex;
+            gap: 70px;
+            text-align: center;
+            justify-content: center;
+            padding: 16px 0px;
+            font-size: 35px;
+            color: #fff;
+        }
+
+        /*     end audio share modal style */
+
+
+
+
+        /* Stills Layout */
+        #normalStills {
+            display: block;
+            /* Use block layout for vertical stacking */
+            padding: 20px;
+            /* Add padding around the container */
+        }
+
+        .still-card {
+            width: 100%;
+            /* Ensure full width for each image */
+            margin-bottom: 20px;
+            /* Space between each still */
+            display: flex;
+            justify-content: center;
+            /* Center the image horizontally */
+        }
+
+        .still-thumbnail img {
+            max-width: 100%;
+            /* Ensure images take up full width */
+            height: auto;
+            /* Maintain aspect ratio */
+            border-radius: 6px;
+            /* Optional: rounded corners for images */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Optional: add shadow for depth */
+        }
+
+        .card-icon {
+            margin-left: -123px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 7px;
+        }
+
+        /* Individual icons */
+        .card-icon img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .still-comment-panel {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 40%;
+            height: 100%;
+            background: #111;
+            color: white;
+            transition: right 0.3s ease-in-out;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .still-comment-panel.open {
+            right: 0;
+        }
+
+        .still-comment-panel header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+        }
+
+        .still-comment-panel header h3 {
+            margin: 0;
+        }
+
+        .still-comment-panel button {
+            background: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .still-comment-panel button:hover {
+            background: #ff1a1a;
+        }
+
+        .still-comment-panel .comment-section {
+            margin-top: 20px;
+        }
+
+        .still-comment-panel textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+            min-height: 100px;
+            font-size: 14px;
+        }
+
+        .still-comment-panel .send-button {
+            background: #0084ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        .still-comment-panel .send-button:hover {
+            background: #006bb3;
+        }
+
+        .still-comment-panel {
+            /* Maximum height for the comment panel */
+            max-height: 800px;
+            /* Adjust this value to your needs */
+            overflow-y: auto;
+            /* This will enable vertical scrolling */
+        }
+
+
+        .Stillshare-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 60px;
+        }
+
+        .Stillshare-modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        .Stillshare-modal-header {
+            text-align: right;
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .Stillshare-options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .Stillshare-options a img {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Full-width input field */
+        .Stillshare-modal .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .Stillshare-modal .copy-btn {
+            background: #0084ff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .Stillshare-modal .copy-btn:hover {
+            background: #006bb3;
+        }
+
+        .links {
+            display: flex;
+            gap: 70px;
+            text-align: center;
+            justify-content: center;
+            padding: 16px 0px;
+            font-size: 35px;
+            color: #fff;
+        }
+
+
+
+
+
+
+        /* Text Layout */
+        #normalText {
+            display: block;
+            /* Use block layout for vertical stacking */
+            padding: 20px;
+            /* Add padding around the container */
+        }
+
+        .text-card {
+            width: 100%;
+            /* Ensure full width for each text image */
+            margin-bottom: 20px;
+            /* Space between each text frame */
+            display: flex;
+            justify-content: center;
+            /* Center the text horizontally */
+        }
+
+        .text-thumbnail img {
+            max-width: 100%;
+            /* Ensure images take up full width */
+            height: auto;
+            /* Maintain aspect ratio */
+            border-radius: 6px;
+            /* Optional: rounded corners for images */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Optional: add shadow for depth */
+        }
+
+        .cards-icons {
+            margin-left: -123px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 7px;
+        }
+
+        /* Individual icons */
+        .cards-icons img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        /* Comment Panel Style */
+        .text-comment-panel {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 40%;
+            height: 100%;
+            background: #111;
+            color: white;
+            transition: right 0.3s ease-in-out;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .text-comment-panel.open {
+            right: 0;
+        }
+
+        .text-comment-panel header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+        }
+
+        .text-comment-panel header h3 {
+            margin: 0;
+        }
+
+        .text-comment-panel button {
+            background: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .text-comment-panel button:hover {
+            background: #ff1a1a;
+        }
+
+        .text-comment-panel .comment-section {
+            margin-top: 20px;
+        }
+
+        .text-comment-panel textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+            min-height: 100px;
+            font-size: 14px;
+        }
+
+        .text-comment-panel .send-button {
+            background: #0084ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        .text-comment-panel .send-button:hover {
+            background: #006bb3;
+        }
+
+        .text-comment-panel {
+            /* Maximum height for the comment panel */
+            max-height: 800px;
+            /* Adjust this value to your needs */
+            overflow-y: auto;
+            /* This will enable vertical scrolling */
+        }
+
+
+        /* Text Share Modal Styles */
+        .share-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 60px;
+        }
+
+        .share-modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        .share-modal-header {
+            text-align: right;
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .share-options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .share-options a img {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Full-width input field */
+        .share-modal .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .share-modal .copy-btn {
+            background: #0084ff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .share-modal .copy-btn:hover {
+            background: #006bb3;
+        }
+
+        .links {
+            display: flex;
+            gap: 70px;
+            text-align: center;
+            justify-content: center;
+            padding: 16px 0px;
+            font-size: 35px;
+            color: #fff;
+        }

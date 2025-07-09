@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0; 
+    background-image: url('assets/img/tree2.jpg');
+    background-size: 100% 101%; /* Image ko stretch karega */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*overflow: hidden;*/
+}
+
+.navbar {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    background-color: #ff3131;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 3;
+    /* overflow-x: auto; Horizontal scroll ke liye */
+    white-space: nowrap; /* Items ek line me rakhne ke liye */
+    /* overflow-y: hidden; Vertical overflow ko remove karne ke liye */
+}
+
+.navbar::-webkit-scrollbar {
+    height: 8px; /* Scrollbar ki height */
+}
+
+.navbar::-webkit-scrollbar-thumb {
+    background-color: #d1d1d1; /* Scrollbar thumb ka color */
+    border-radius: 4px; /* Round corners for thumb */
+}
+
+.navbar::-webkit-scrollbar-thumb:hover {
+    background-color: #b5b5b5; /* Hover effect */
+}
+
+.navbar .icon {
+    width: 11%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease, margin-top 0.3s ease;
+    margin: 0 5px; /* Icons ke beech spacing */
+    position: relative; /* Relative position for proper hover effect */
+    padding: 0px 15px;
+}
+
+.navbar .icon:hover {
+    transform: scale(1.4);
+    margin-top: 0px;
+    z-index: 5;
+    overflow: visible;
+}
+.navbar::-webkit-scrollbar-thumb {
+    background-color: #ff3131; /* Scroll thumb ka color */
+    border-radius: 4px; /* Scroll thumb ke corners ko round karna */
+}
+
+/* Scroll thumb hover effect */
+.navbar::-webkit-scrollbar-thumb:hover {
+    background-color: #ff3131; /* Hover par thumb ka color change */
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.tree-section {
+    position: relative;
+    height: 85vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.friends-text {
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    color: #4CAF50;
+  
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#avatars-container {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.navbar {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    background-color: #ff3131;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 3;
+    white-space: nowrap;
+}
+
+.navbar .icon {
+    width: 10%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease, margin-top 0.3s ease;
+    margin: 0 5px;
+    padding: 0px 15px;
+}
+
+.navbar .icon:hover {
+    transform: scale(1.4);
+    margin-top: 0px;
+    z-index: 5;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.tree-section {
+    position: relative;
+    height: 85vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#avatars-container {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+@media (max-width: 480px) {
+  
+    .navbar .icon {
+        width: 26%;
+        height: auto;
+    }
+
+}
+
+
+
+.icon {
+ position: relative; /* Make sure the image is positioned relative */
+}
+.map-text {
+   display: none;
+   position: absolute;
+   top: -50px;
+   left: 5%;
+   transform: translateX(-50%);
+   color: #fff;
+   z-index: 9999;
+   background-color: #2d6a30;
+   color: white;
+   
+   font-size: 22px;
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   padding: 7px 21px;
+   border-radius: 12px;
+   border: none;
+   cursor: pointer;
+   transition: transform 0.3s ease;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon:hover + .map-text {
+   display: block;
+}
+
+span.map-text.Radio-text {
+   left: 15%;
+}
+
+span.map-text.music {
+   left: 26%;
+}
+
+span.map-text.feed {
+   left: 36%;
+}
+
+span.map-text.cameras {
+   left: 46%;
+}
+
+span.map-text.Room {
+   left: 57%;
+}
+@media screen and (orientation: landscape) {
+    .navbar{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        bottom: 10px !important;
+        
+    }
+    /* .navbar .icon {
+    width: 12% !important;
+        
+    } */
+    #avatars-container {
+    height: 78% !important;
+}
+    
+  }
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    .navbar{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding: 00px 0 !important;
+    }
+  }
+
+span.map-text.Friends {
+   left: 67%;
+}
+
+span.map-text.name {
+   left: 77%;
+}
+
+span.map-text.setting {
+   left: 87%;
+}
+
+span.map-text.fam {
+   left: 96%;
+}
+
